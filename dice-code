@@ -1,0 +1,31 @@
+using System;
+
+namespace tärning
+{
+    public static class StringConversion
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                //vi måste veta hur många kast användaren vill göra
+                Console.WriteLine("Skriv in hur många slag du vill kasta");
+                string antalSlag = Console.ReadLine();
+                //vi skapar en random funktion
+                Random rnd = new Random();
+                
+                //Vi loopar lika många gånger som användaren har skrivit in. Vi har även konverterat stringen till en integer.
+                for (int i = 0; i < Convert.ToInt32(antalSlag); i++)
+                {
+                    // vi definierar en integer som ska generera ett random nummer 
+                    int dice_number = rnd.Next(1, 7);
+                    Console.WriteLine("Resultat: " + dice_number);
+                    
+
+                }
+
+            }
+        }
+    }
+}
+
